@@ -8,6 +8,7 @@ npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-
 
 npm install --save-dev react-hot-loader webpack webpack-dev-server
 
+
 ### 2) %PROJECT_HOME%/webpack.config.js
 
      var webpack = require("webpack");
@@ -51,9 +52,11 @@ npm install --save-dev react-hot-loader webpack webpack-dev-server
           ]
      };
 
+
 ### 3) %PROJECT_HOME%/public/index.html 
      <div id="root"></div>
      <script src="bundle.js"></script>
+
 
 ### 4) %PROJECT_HOME%/src/components/App.js
      import React from 'react';
@@ -68,3 +71,18 @@ npm install --save-dev react-hot-loader webpack webpack-dev-server
 
      export default App;
 
+
+### 5) %PROJECT_HOME%/src/index.js
+     import React from 'react';
+     import ReactDOM from 'react-dom';
+     import App from './components/App';
+
+     const rootElement = document.getElementById("root");
+     ReactDOM.render( <App />, rootElement );
+
+
+### 6) %PROJECT_HOME%/package.json
+     scripts: {
+     "dev-server" : "webpack-dev-server"
+}
+*npm run dev-server 로 실행 가능
