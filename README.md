@@ -84,5 +84,5 @@ npm install --save-dev react-hot-loader webpack webpack-dev-server
 ### 6) %PROJECT_HOME%/package.json
      scripts: {
      "dev-server" : "webpack-dev-server"
-}
+     }
 *npm run dev-server 로 실행 가능
